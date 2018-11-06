@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/10.0.1"
+          xmlns:fx="http://javafx.com/fxml/1" fx:controller="CheckoutSimulator.controller.HomeController">
+    <columnConstraints>
+        <ColumnConstraints/>
+        <ColumnConstraints/>
+        <ColumnConstraints/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints/>
+        <RowConstraints/>
+        <RowConstraints/>
+    </rowConstraints>
+    <children>
+        <AnchorPane prefHeight="300.0" prefWidth="600.0">
+            <children>
+                <Label layoutX="22.0" layoutY="21.0" text="CheckOut Simulator">
+                    <font>
+                        <Font name="System Bold" size="16.0"/>
+                    </font>
+                </Label>
+                <GridPane layoutX="22.0" layoutY="60.0" prefHeight="141.0" prefWidth="459.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                    <children>
+                        <Label text="Total No of Checkouts"/>
+                        <Label text="Total no of Express Counters" GridPane.rowIndex="1"/>
+                        <Label text="Simulation time" GridPane.rowIndex="2"/>
+                        <Spinner fx:id="totalNoOfCheckout" GridPane.columnIndex="1"/>
+                        <Spinner fx:id="totalNoOfExpressCheckout" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                        <Spinner fx:id="simulationTime" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                    </children>
+                </GridPane>
+                <Button fx:id="button" layoutX="221.0" layoutY="219.0" mnemonicParsing="false" text="Start Simulation"/>
+            </children>
+        </AnchorPane>
+    </children>
+</GridPane>
